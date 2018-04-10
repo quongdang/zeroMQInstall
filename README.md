@@ -10,25 +10,24 @@ sudo apt-get install libtool pkg-config build-essential autoconf automake
 
 ## libsodium
 
-ZeroMQ builds against [the Sodium library](https://github.com/jedisct1/libsodium).
+ZeroMQ builds against.
 
 ```sh
-wget https://github.com/jedisct1/libsodium/releases/download/1.0.3/libsodium-1.0.3.tar.gz
-tar -zxvf libsodium-1.0.3.tar.gz
-cd libsodium-1.0.3/
-./configure
-make
+sudo tar -zxvf libsodium-1.0.13.tar.gz
+cd libsodium-1.0.13/
+sudo ./autogen.sh
+sudo ./configure && make check
 sudo make install
+sudo ldconfig
 ```
 
 ## ZeroMQ
 
 ```sh
-wget http://download.zeromq.org/zeromq-4.1.3.tar.gz
-tar -zxvf zeromq-4.1.3.tar.gz
+tar -zxvf zeromq-4.1.4.tar.gz
 cd zeromq-4.1.3/
-./configure
-make
+sudo ./autogen.sh
+sudo ./configure && make check
 sudo make install
 sudo ldconfig
 ```
