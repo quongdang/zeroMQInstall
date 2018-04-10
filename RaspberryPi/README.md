@@ -15,7 +15,7 @@ ZeroMQ builds against.
 ```sh
 sudo tar -zxvf libsodium-1.0.13.tar.gz
 cd libsodium-1.0.13/
-sudo ./autogen.sh
+sudo sh ./autogen.sh
 sudo ./configure && make check
 sudo make install
 sudo ldconfig
@@ -26,7 +26,7 @@ sudo ldconfig
 ```sh
 tar -zxvf zeromq-4.1.4.tar.gz
 cd zeromq-4.1.3/
-sudo ./autogen.sh
+sudo sh ./autogen.sh
 sudo ./configure && make check
 sudo make install
 sudo ldconfig
@@ -42,3 +42,11 @@ The [pyzmq package](https://github.com/zeromq/pyzmq) requires `python-dev` to co
 sudo apt-get install python-dev
 sudo pip install pyzmq
 ```
+
+# SoapUI Install
+
+This refer to https://www.bonusbits.com/wiki/HowTo:Install_SoapUI_on_Ubuntu
+```sh
+sudo tar -zxvf SoapUI-5.4.0-linux-bin.tar.gz -C /opt/
+cd /opt/SoapUI-5.4.0/bin
+sudo ./soapui.sh
